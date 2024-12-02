@@ -1,0 +1,328 @@
+<html>
+  <head>
+    <!-- JQuery Load -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS Load -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+    <script src="data/data.js"></script>
+  </head>
+  <body>
+    <div class="head-bar">
+      <div class="name se-fonts" style="flex: 1">추가한 서체 모아보기</div>
+      <div class="name mainP" style="flex: 1; text-align: center">
+        <a href="index.html">공공기관 개발 서체 아카이브</a>
+      </div>
+      <div class="menu" style="flex: 1; justify-content: flex-end">
+        <div class="menu-item">
+          <a href="about.html">웹사이트 소개</a>
+        </div>
+        <div class="menu-item">
+          <a href="font-list.html">공공기관 개발 서체 둘러보기</a>
+        </div>
+      </div>
+    </div>
+    <div class="tag-bar"></div>
+    <div class="function-tag-bar"></div>
+    <div class="se-font-wrapper contents">
+      <div
+        style="
+          font-size: 40px;
+          width: 100%;
+          text-align: center;
+          letter-spacing: -0.05em;
+          font-weight: 600;
+          margin-bottom: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img
+          src="img/plus_large.png"
+          style="height: 40px; margin-right: 24px"
+        />
+        추가한 서체 모아보기
+      </div>
+      <div class="no-fonts">선택한 서체가 없습니다</div>
+      <div class="list-container" style="width: 100%"></div>
+    </div>
+    <div class="content-wrapper">
+      <div class="side-bar">
+        <div class="tag-box">
+          <div class="tag-label">
+            <div class="label">인상어</div>
+            <div class="arrow">
+              <img src="img/arrow_up.png" />
+            </div>
+          </div>
+          <div>
+            <div class="radio-button-container">
+              <div class="button" active="false" value="가볍다">가볍다</div>
+              <div class="button" active="false" value="무겁다">무겁다</div>
+            </div>
+            <div class="radio-button-container">
+              <div class="button" active="false" value="부드럽다">부드럽다</div>
+              <div class="button active" active="true" value="딱딱하다">
+                딱딱하다
+              </div>
+            </div>
+            <div class="radio-button-container">
+              <div class="button" active="false" value="자유롭다">자유롭다</div>
+              <div class="button" active="false" value="단정하다">단정하다</div>
+            </div>
+          </div>
+          <div>
+            <div class="round-button-container">
+              <div class="button active" active="true" value="장식적이다">
+                장식적이다
+              </div>
+              <div class="button" active="false" value="발랄하다">발랄하다</div>
+              <div class="button" active="false" value="강하다">강하다</div>
+              <div class="button" active="false" value="고전적이다">
+                고전적이다
+              </div>
+            </div>
+          </div>
+          <div class="detail-show">세부적인 인상들을 활용해보세요</div>
+          <div>
+            <div class="check-box-conttainer addt">
+              <div class="check-box-item 경쾌하다">
+                <input
+                  type="checkbox"
+                  class="imp-check"
+                  value="경쾌하다"
+                  t="경쾌하다"
+                />
+                <label>경쾌하다</label>
+              </div>
+              <div class="check-box-item 날카롭다">
+                <input
+                  type="checkbox"
+                  class="imp-check"
+                  value="날카롭다"
+                  t="날카롭다"
+                />
+                <label>날카롭다</label>
+              </div>
+              <div class="check-box-item 여리다">
+                <input
+                  type="checkbox"
+                  class="imp-check"
+                  value="여리다"
+                  t="여리다"
+                />
+                <label>여리다</label>
+              </div>
+              <div class="check-box-item 시원하다">
+                <input
+                  type="checkbox"
+                  class="imp-check"
+                  value="시원하다"
+                  t="시원하다"
+                />
+                <label>시원하다</label>
+              </div>
+              <div class="check-box-item 깔끔하다">
+                <input type="checkbox" class="imp-check" t="깔끔하다" />
+                <label>깔끔하다</label>
+              </div>
+              <div class="check-box-item 단아하다">
+                <input type="checkbox" class="imp-check" t="단아하다" />
+                <label>단아하다</label>
+              </div>
+              <div class="check-box-item 아기자기하다">
+                <input type="checkbox" class="imp-check" t="아기자기하다" />
+                <label>아기자기하다</label>
+              </div>
+
+              <div class="check-box-item 견고하다">
+                <input type="checkbox" class="imp-check" t="견고하다" />
+                <label>견고하다</label>
+              </div>
+              <div class="check-box-item 거칠다">
+                <input type="checkbox" class="imp-check" t="거칠다" />
+                <label>거칠다</label>
+              </div>
+              <div class="check-box-item 굳세다">
+                <input type="checkbox" class="imp-check" t="굳세다" />
+                <label>굳세다</label>
+              </div>
+              <div class="check-box-item 듬직하다">
+                <input type="checkbox" class="imp-check" t="듬직하다" />
+                <label>듬직하다</label>
+              </div>
+              <div class="check-box-item 넉넉하다">
+                <input type="checkbox" class="imp-check" t="넉넉하다" />
+                <label>넉넉하다</label>
+              </div>
+              <div class="check-box-item 수수하다">
+                <input type="checkbox" class="imp-check" t="수수하다" />
+                <label>수수하다</label>
+              </div>
+              <div class="check-box-item 투박하다">
+                <input type="checkbox" class="imp-check" t="투박하다" />
+                <label>투박하다</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tag-box">
+          <div class="tag-label">
+            <div class="label">기능 요소</div>
+            <div class="arrow">
+              <img src="img/arrow_up.png" />
+            </div>
+          </div>
+          <div class="function-input-box">
+            <div class="function-label">크기</div>
+          </div>
+          <div
+            class="function-radio-box font-size-box"
+            style="margin-bottom: 12px"
+          >
+            <div
+              class="function-radio-item active"
+              value="크게_쓸_때"
+              active="true"
+            >
+              <div class="small">제목용</div>
+              <div class="name">크게 쓰기</div>
+            </div>
+            <div class="function-radio-item" value="작게_쓸_때" active="false">
+              <div class="small">본문용</div>
+              <div class="name">작게 쓰기</div>
+            </div>
+          </div>
+          <div class="function-input-box">
+            <div class="function-label">글자수</div>
+          </div>
+          <div
+            class="function-radio-box font-count-box"
+            style="margin-bottom: 12px"
+          >
+            <div
+              class="function-radio-item active"
+              active="true"
+              value="기본형_2350"
+            >
+              <div class="small">2,350자</div>
+              <div class="name">기본형</div>
+            </div>
+            <div class="function-radio-item" active="false" value="확장형_2780">
+              <div class="small">2,780자</div>
+              <div class="name">확장형</div>
+            </div>
+            <div
+              class="function-radio-item"
+              style="border-left: none"
+              value="완성형_11172"
+            >
+              <div class="small">11,172자</div>
+              <div class="name">완성형</div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              margin-bottom: 16px;
+              justify-content: space-between;
+            "
+          >
+            <div style="display: flex; align-items: center">
+              <div class="toggle-label">자족 <span>다양한두께</span></div>
+              <label
+                class="a8z-toggle-switch"
+                for="example_rounded_5"
+                data-size="xs"
+                data-style="rounded"
+              >
+                <input
+                  type="checkbox"
+                  id="example_rounded_5"
+                  class="addf-check"
+                  t="자족"
+                />
+                <span class="toggle">
+                  <span class="switch"></span>
+                </span>
+              </label>
+            </div>
+            <div style="display: flex; align-items: center; margin-right: 12px">
+              <div class="toggle-label" style="margin-left: 8px">부리/돌기</div>
+              <label
+                class="a8z-toggle-switch"
+                for="example_rounded_6"
+                data-size="xs"
+                data-style="rounded"
+                style="
+                  --a8z-ts-input-checked-content: '있음';
+                  --a8z-ts-input-unchecked-content: '없음';
+                "
+              >
+                <input
+                  type="checkbox"
+                  id="example_rounded_6"
+                  class="addf-check"
+                  t="부리_돌기"
+                />
+                <span class="toggle">
+                  <span class="switch"></span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="function-input-box">
+            <div class="function-label">부가기능</div>
+          </div>
+          <div>
+            <div class="check-box-conttainer addf">
+              <div class="check-box-item">
+                <input type="checkbox" class="addf-check" t="세로쓰기" />
+                <label>세로쓰기</label>
+              </div>
+              <div class="check-box-item">
+                <input type="checkbox" class="addf-check" t="메뉴얼" />
+                <label>메뉴얼지원</label>
+              </div>
+              <div class="check-box-item">
+                <input type="checkbox" class="addf-check" t="손글씨" />
+                <label>손글씨</label>
+              </div>
+              <div class="check-box-item">
+                <input type="checkbox" class="addf-check" t="다국어" />
+                <label>한자지원</label>
+              </div>
+              <div class="check-box-item" style="flex: 100% 0 0">
+                <input type="checkbox" class="addf-check" t="고어_방언_딩벳" />
+                <label>한글 고어 지원</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="tag-box">서체 검색하기</div> -->
+      </div>
+      <div class="contents">
+        <div class="grid-container">
+          <div class="no-item">조건에 해당하는 서체가 없습니다</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".name.mainP").on("click", function () {
+        $(".se-font-wrapper.contents").css("display", "none");
+        $(".content-wrapper").css("display", "flex");
+      });
+    });
+  </script>
+</html>

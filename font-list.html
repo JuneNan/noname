@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <!-- JQuery Load -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS Load -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+    <script src="data/data.js"></script>
+  </head>
+  <body>
+    <div class="head-bar">
+      <div class="name se-fonts" style="flex: 1"></div>
+      <div class="name" style="flex: 1; text-align: center">
+        <a href="index.html">공공기관 개발 서체 아카이브</a>
+      </div>
+      <div class="menu" style="flex: 1; justify-content: flex-end">
+        <div class="menu-item">
+          <a href="about.html">웹사이트 소개</a>
+        </div>
+        <div class="menu-item">
+          <a href="font-list.html">공공기관 개발 서체 둘러보기</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="content-wrapper"
+      style="
+        background-color: white;
+        overflow-x: scroll;
+        min-height: 100vh;
+        height: 100vh;
+        padding: 0;
+        padding-top: 40px;
+      "
+    >
+      <img src="img/timeline.png" style="height: calc(100vh - 60px)" />
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      const container = document.querySelector(".content-wrapper");
+
+      // 휠 이벤트를 가로 스크롤로 변환
+      container.addEventListener("wheel", (event) => {
+        event.preventDefault(); // 기본 세로 스크롤 동작 방지
+        container.scrollLeft += event.deltaY; // 세로 휠을 가로 스크롤로 변환
+      });
+    });
+  </script>
+</html>
